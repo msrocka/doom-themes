@@ -75,7 +75,7 @@ Can be an integer to determine the exact padding."
    (operators      fg)
    (type           fg)
    (strings        base0)
-   (variables      base0)
+   (variables      fg)
    (numbers        base0)
    (region         base4)
    (error          (doom-blend fg "#ff0000" 0.4))
@@ -139,9 +139,15 @@ Can be an integer to determine the exact padding."
    (outline-6 :inherit 'outline-5)
    (outline-7 :inherit 'outline-6)
    (outline-8 :inherit 'outline-7)
+
    ;;;; org <built-in>
    ((org-block &override) :background bg-alt)
    ((org-block-begin-line &override) :foreground base5)
+
+   ;;;; markdown
+   ((markdown-code-face &override) :background base1 :foreground fg)
+   ((markdown-pre-face &override)  :background base1 :foreground fg)
+   
    ;;;; solaire-mode
    (solaire-mode-line-face
     :inherit 'mode-line
