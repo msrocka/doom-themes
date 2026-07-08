@@ -87,8 +87,8 @@ Can be an integer to determine the exact padding."
    (vertical-bar   (doom-darken base2 0.1))
    (selection      dark-blue)
    (builtin        magenta)
-   (comments       cyan)
-   (doc-comments   cyan)
+   (comments       blue)
+   (doc-comments   blue)
    (constants      magenta)
    (functions      fg)
    (keywords       magenta)
@@ -168,14 +168,18 @@ Can be an integer to determine the exact padding."
    (markdown-header-face     :inherit 'bold :foreground magenta)
    ((markdown-code-face &override) :background bg :foreground blue)
    (mmm-default-submode-face :background base1)
+
    ;;;; outline <built-in>
-   ((outline-1 &override) :foreground red)
-   ((outline-2 &override) :foreground orange)
+   ((outline-1 &override) :foreground magenta)
+   ((outline-2 &override) :foreground magenta)
+
    ;;;; org <built-in>
-   ((org-block &override) :background base1)
-   ((org-block-begin-line &override) :foreground fg :slant 'italic)
-   (org-ellipsis :underline nil :background bg     :foreground red)
-   ((org-quote &override) :background base1)
+   ((org-block &override) :background bg)
+   ((org-block-begin-line &override) :background base0 :foreground fg)
+   (org-ellipsis :underline nil :background bg :foreground red)
+   ((org-quote &override) :background bg :foreground blue)
+   ((org-verbatim &override) :foreground blue)
+   
    ;;;; posframe
    (ivy-posframe               :background base0)
    ;;;; selectrum
