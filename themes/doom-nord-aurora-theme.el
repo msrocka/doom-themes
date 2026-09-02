@@ -196,9 +196,10 @@ determine the exact padding."
 
    ;; markdown-mode
    (markdown-markup-face :foreground base5)
-   (markdown-header-face :inherit 'bold :foreground red)
-   ((markdown-code-face &override) :background (doom-lighten base3 0.05))
-
+   (markdown-language-keyword-face :foreground base5)
+   (markdown-header-face :inherit 'bold :foreground yellow)
+   ((markdown-code-face &override) :background bg)
+   
    ;; org-mode
    (org-hide :foreground hidden)
    (solaire-org-hide-face :foreground hidden))
