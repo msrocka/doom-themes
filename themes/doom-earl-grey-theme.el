@@ -544,7 +544,7 @@ determine the exact padding."
     :weight 'semi-bold
     :extend t)
    ((org-block &override)
-    :background bg-alt
+    :background bg
     :foreground fg
     :extend t)
    ((org-quote &override)
