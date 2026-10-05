@@ -128,7 +128,11 @@ Can be an integer to determine the exact padding."
   ;;;; Base theme face overrides
   (((font-lock-comment-face &override)
     :background (if doom-one-light-brighter-comments base0 'unspecified))
-   ((font-lock-doc-face &override) :slant 'italic)
+   ((font-lock-doc-face &override)
+    :slant 'italic)
+   (font-lock-property-name-face
+    :foreground fg
+    :background bg)
    ((line-number &override) :foreground (doom-lighten base4 0.15))
    ((line-number-current-line &override) :foreground base8)
    (mode-line

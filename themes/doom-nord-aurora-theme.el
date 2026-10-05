@@ -153,7 +153,10 @@ determine the exact padding."
    (font-lock-doc-face
     :inherit 'font-lock-comment-face
     :foreground doc-comments)
-
+   (font-lock-property-name-face
+    :foreground fg
+    :background bg)
+   
    (doom-modeline-bar :background (if -modeline-bright modeline-bg highlight))
 
    (mode-line
@@ -187,8 +190,19 @@ determine the exact padding."
    ;; ivy
    ((ivy-current-match &override) :foreground region-fg :weight 'semi-bold)
 
-
+   ;; outline
+   ((outline-1 &override) :foreground yellow)
+   ((outline-2 &override) :foreground yellow)
+   ((outline-3 &override) :foreground yellow)
+   ((outline-4 &override) :foreground yellow)
+   ((outline-5 &override) :foreground yellow)
+   
    ;; --- major-mode faces -------------------
+
+   ;; org-mode
+   ((org-block &override) :background bg)
+   ((org-block-begin-line &override) :background base3 :foreground fg)
+
    ;; css-mode / scss-mode
    (css-proprietary-property :foreground orange)
    (css-property             :foreground green)
