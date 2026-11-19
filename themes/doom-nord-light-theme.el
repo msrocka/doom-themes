@@ -87,18 +87,18 @@ determine the exact padding."
    (highlight (doom-blend blue bg 0.8))
    (vertical-bar (doom-darken bg 0.15))
    (selection (doom-blend blue bg 0.5))
-   (builtin teal)
-   (comments (if doom-nord-light-brighter-comments dark-cyan (doom-darken base5 0.2)))
-   (doc-comments (doom-darken (if doom-nord-light-brighter-comments dark-cyan base5) 0.25))
-   (constants magenta)
-   (functions teal)
-   (keywords blue)
-   (methods teal)
-   (operators blue)
-   (type yellow)
-   (strings green)
-   (variables violet)
-   (numbers magenta)
+   (builtin violet)
+   (comments dark-cyan)
+   (doc-comments dark-cyan)
+   (constants violet)
+   (functions fg)
+   (keywords violet)
+   (methods fg)
+   (operators fg)
+   (type fg)
+   (strings blue)
+   (variables fg)
+   (numbers blue)
    (region (pcase doom-nord-light-region-highlight
              ((\` frost) (doom-lighten teal 0.5))
              ((\` snowstorm) base0)
@@ -168,17 +168,25 @@ determine the exact padding."
    ;;;; magit
    (magit-diff-hunk-heading-highlight :foreground bg :background blue :weight 'bold)
    (magit-diff-hunk-heading :foreground bg :background (doom-blend blue bg 0.3))
+
    ;;;; markdown-mode
    (markdown-markup-face :foreground base5)
    (markdown-header-face :inherit 'bold :foreground red)
-   ((markdown-code-face &override) :background (doom-lighten base3 0.05))
+   ((markdown-code-face &override) :background bg :foreground blue)
+   
    ;;;; mic-paren
    ((paren-face-match &override) :foreground red :background base3 :weight 'ultra-bold)
    ((paren-face-mismatch &override) :foreground base3 :background red :weight 'ultra-bold)
    ;;;; nav-flash
    (nav-flash-face :background region :foreground base8 :weight 'bold)
+
    ;;;; org <built-in>
    (org-hide :foreground hidden)
+   ((org-block &override) :background bg)
+   ((org-block-begin-line &override) :background bg-alt :foreground fg)
+   ((org-quote &override) :background bg :foreground blue)
+   ((org-verbatim &override) :foreground blue)
+      
    ;;;; solaire-mode
    (solaire-mode-line-face
     :inherit 'mode-line

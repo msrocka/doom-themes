@@ -91,7 +91,7 @@ determine the exact padding."
    (builtin        yellow)
    (comments       blue)
    (doc-comments   blue)
-   (constants      blue)
+   (constants      fg)
    (functions      fg)
    (keywords       yellow)
    (methods        fg)

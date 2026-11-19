@@ -167,10 +167,12 @@ Can be an integer to determine the exact padding."
    (magit-blame-heading     :foreground orange :background bg-alt)
    (magit-diff-removed :foreground (doom-darken red 0.2) :background (doom-blend red bg 0.1))
    (magit-diff-removed-highlight :foreground red :background (doom-blend red bg 0.2) :bold bold)
+   
    ;;;; markdown-mode
    (markdown-markup-face     :foreground base5)
    (markdown-header-face     :inherit 'bold :foreground magenta)
    ((markdown-code-face &override) :background bg :foreground blue)
+
    (mmm-default-submode-face :background base1)
 
    ;;;; outline <built-in>
